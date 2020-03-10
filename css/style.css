@@ -1,0 +1,41 @@
+body {
+  color: white;
+  background-color: salmon;
+  margin: 5px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+  margin: 20px;
+  border-bottom: thin solid white;
+  width: 500px;
+  text-indent: 2%;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+
+nav {
+  font-size: 18px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 10px;
+  padding: 10px;
+}
+
+p {
+  text-indent: 5%;
+  width: 500px;
+}
+
+.store {
+  float: left;
+  width: 200px;
+}
