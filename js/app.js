@@ -16,7 +16,7 @@ var seattle = {
     var totalCookiesSold = 0;
 
     for (var i = 0; i <= this.hoursOpen -1; i++) {
-      // for (var i= 0; i < 1; i++) {
+
       //Calculates random number between min and max customers
       var randomCustomer = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
       // console.log(randomCustomer);
