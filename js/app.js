@@ -1,6 +1,5 @@
 'use strict';
 
-
 var seattle = {
   name: 'seattle',
   min: 23,
@@ -322,3 +321,58 @@ dubai.renderData();
 paris.renderData();
 lima.renderData();
 
+
+
+
+/** *****************************************************Constructor Function******************************************************* */
+
+// function CreateStore(location, minCust, maxCust, avgCookieSale) {
+
+//   var totalCookiesSold = 0;
+//   var hoursOpen = 14;
+//   var customerArray = [];
+//   var cookieArray = [];
+//   var cookiesSoldArray = [];
+//   var lastTotal = 0;
+
+//   this.location = location;
+//   this.minCust = minCust;
+//   this.maxCust = maxCust;
+//   this.avgCookieSale = avgCookieSale;
+//   this.customerArray = customerArray;
+//   this.cookieArray = cookieArray;
+//   this.cookiesSoldArray = cookiesSoldArray;
+//   this.lastTotal = lastTotal;
+
+//   //Loop to run per hour and push data to array properties
+//   for (var i = 0; i <= hoursOpen -1; i++) {
+//     //Calculates random number between min and max customers
+//     var randomCustomer = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+//     // console.log(randomCustomer);
+
+//     //Takes randomCustomer value times the average cookie sale
+//     var totalCookies = Math.floor(randomCustomer * avgCookieSale);
+//     // console.log(totalCookies);
+
+//     //Running total of cookies sold per hour (hours are calcul ated in the condition of the loop)
+//     totalCookiesSold = totalCookiesSold + totalCookies;
+//     // console.log(totalCookiesSold);
+
+//     //stores all data into two arrays
+//     customerArray.push(randomCustomer);
+//     cookieArray.push(totalCookies);
+//     cookiesSoldArray.push(totalCookiesSold);
+//     this.lastTotal = totalCookiesSold;
+//   }
+
+// }
+// var seattle = new CreateStore('Seattle', 23, 65, 6.3);
+// var tokyo = new CreateStore('Tokyo', 3, 24, 1.2);
+// var dubai = new CreateStore('Dubai', 11, 38, 3.7);
+// var paris = new CreateStore('Paris', 20, 38, 2.3);
+// var lima = new CreateStore('Lima', 2, 16, 4.6);
+// console.log(seattle);
+// console.log(tokyo);
+// console.log(dubai);
+// console.log(paris);
+// console.log(lima);
