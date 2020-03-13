@@ -104,7 +104,28 @@ p {
   width: inherit;
 }
 
-tr, td {
+#storeData > * > *{
   border: thin solid black;
   margin: 5px;
+}
+
+form {
+  display: inline-block;
+  width: 450px;
+  text-align: right;
+}
+
+#formBox {
+  width: 455px;
+  float: left;
+
+}
+
+button {
+  text-align: center;
+  align-items: center;
+}
+
+#storeData {
+  display: inline-block;
 }

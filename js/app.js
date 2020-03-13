@@ -5,12 +5,12 @@ var hours = 14;
 var hoursOfOperation = ['7am ', '8am ','9am ', '10am ', '11am ', '12pm ', '1pm ', '2 pm ', '3pm ', '4pm ', '5pm ', '6pm ', '7pm ', '8pm ' ];
 
 //Constructor which is used to build all stores using 4 param's
-function CreateStore(name, minCust, maxCust, avgCust) {
+function CreateStore(name, minCust, maxCust, avgCookie) {
 
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
-  this.avgCust = avgCust;
+  this.avgCookie = avgCookie;
   this.hours = hours;
 
   //invokes prototype which returns two pieces of information our cookie sales and cookie sum
@@ -35,7 +35,7 @@ CreateStore.prototype.metrics = function() {
     //Calculates random number between min and max customers
     var randomCustomer = Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
     //Takes randomCustomer value times the average cookie sale
-    var totalCookies = Math.ceil(randomCustomer * this.avgCust);
+    var totalCookies = Math.ceil(randomCustomer * this.avgCookie);
     //Running total of cookies sold per hour
     dailySum += totalCookies;
     //takes totalCookies per hour and pushes them into an array
@@ -150,6 +150,46 @@ function renderFooterRow() {
   createRow.appendChild(createCol);
   getTable.appendChild(createRow);
 }
+
+//Function that handles the form event
+var addStoreForm = document.getElementById('addStoreForm');
+function formHandler(event) {
+  event.preventDefault();
+
+  //variables that grab the event and assign it by the user input value for name
+  var userInput = event.target;
+  // var newStore = userInput.name.value;
+  // console.log(newStore);
+
+  //Here user input is passed through constructor to make a new store in the 'stores' array
+  new CreateStore(userInput.name.value, userInput.minCust.value, userInput.maxCust.value, userInput.avgCookie.value);
+  console.log(stores);
+
+}
+
+//Attaches form event handler to event listener
+addStoreForm.addEventListener('submit', formHandler);
+
+//Function that handles the button event
+var buttonEl = document.getElementById('submitButton');
+function buttonHandler(event) {
+  document.getElementById('storeData').innerHTML = null;
+  renderHeaderRow();
+  //This loop will cycle through our stores array and renders them to the table.
+  for (var i = 0; i < stores.length; i++) {
+    stores[i].renderRow();
+  }
+  renderFooterRow();
+}
+
+//Attaches button event handler to event listener
+
+buttonEl.addEventListener('click', buttonHandler);
+
+
+
+
+
 
 renderHeaderRow();
 seattle.renderRow();
