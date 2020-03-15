@@ -152,7 +152,6 @@ function renderFooterRow() {
 }
 
 //Function that handles the form event
-var addStoreForm = document.getElementById('addStoreForm');
 function formHandler(event) {
   event.preventDefault();
 
@@ -168,10 +167,10 @@ function formHandler(event) {
 }
 
 //Attaches form event handler to event listener
+var addStoreForm = document.getElementById('addStoreForm');
 addStoreForm.addEventListener('submit', formHandler);
 
 //Function that handles the button event
-var buttonEl = document.getElementById('submitButton');
 function buttonHandler(event) {
   document.getElementById('storeData').innerHTML = null;
   renderHeaderRow();
@@ -183,14 +182,10 @@ function buttonHandler(event) {
 }
 
 //Attaches button event handler to event listener
-
+var buttonEl = document.getElementById('submitButton');
 buttonEl.addEventListener('click', buttonHandler);
 
-
-
-
-
-
+//Builds table from objects prototypes, headed/footer are stand alone functions.
 renderHeaderRow();
 seattle.renderRow();
 tokyo.renderRow();
@@ -198,6 +193,8 @@ dubai.renderRow();
 paris.renderRow();
 lima.renderRow();
 renderFooterRow();
+
+/** ***********************OLD CODE BELOW **************************** **/
 
 // var seattle = {
 //   name: 'seattle',
