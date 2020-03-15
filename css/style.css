@@ -53,7 +53,7 @@ p {
   width: 500px;
 }
 
-.store {
+/* .store {
   padding: 5px;
   margin: 5px;
   text-align: center;
@@ -63,16 +63,11 @@ p {
   border: medium  solid black;
   box-shadow: rgb(63, 62, 62) 2px 2px;
   border-radius: 25px;
-}
+} */
 
-.store ul {
+/* .store ul {
   text-align: center;
-}
-
-#box {
-  width: 700px;
-  margin: auto;
-}
+} */
 
 #box2 {
   width: 1100px;
@@ -104,7 +99,61 @@ p {
   width: inherit;
 }
 
-tr, td {
+#storeData > * > *{
   border: thin solid black;
   margin: 5px;
+  padding: 10px;
 }
+
+#storeData {
+  border-radius: 2px;
+}
+
+form {
+  display: inline-block;
+  width: 450px;
+  text-align: right;
+}
+
+#formBox {
+  width: 455px;
+  /* float: left; */
+}
+
+#saleSection{
+  align-items: center;
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+}
+
+button {
+  text-align: center;
+  align-items: center;
+}
+
+#storeData {
+  display: inline-block;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+a:link, a:visited {
+  color: white;
+  background-color: rgb(146, 132, 146, 0.3);
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  border: thin solid black;
+  box-shadow: rgb(63, 62, 62) 2px 2px;
+  border-radius: 25px;
+}
+
+a:active {
+  color: white;
+  text-decoration: underline;
+}
+

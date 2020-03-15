@@ -26,36 +26,51 @@
       </li>
     </ul>
   </nav>
-
+  <br>
   <hr>
   <br>
-
-  <section id="box">
-    <div class="store">
-      <h3>Seattle Store Sales</h3>
-      <ul id="seattle"></ul>
+  <section id="saleSection">
+    <div id="formBox">
+      <form id="addStoreForm">
+        <fieldset>
+          <legend>Create a new Store Form</legend>
+          <label>
+            Store Name:
+            <input name="name" required></input>
+          </label>
+          <br>
+          <br>
+          <label>
+            Minimum Customer Per Hour:
+            <input type="number" name="minCust" required></input>
+          </label>
+          <br>
+          <br>
+          <label>
+            Maximum Customer Per Hour:
+            <input type="number" name="maxCust" required></input>
+          </label>
+          <br>
+          <br>
+          <label>
+            Average Cookies Sold Per Hour:
+            <input type="number" name="avgCookie" step="any" required></input>
+          </label>
+          <br>
+          <br>
+          <button id="submitButton" type="onclick">Submit to Table</button>
+        </fieldset>
+      </form>
     </div>
-
-    <div class="store">
-      <h3>Tokyo Store Sales</h3>
-      <ul id="tokyo"></ul>
-    </div>
-
-    <div class="store">
-      <h3>Dubai Store Sales</h3>
-      <ul id="dubai"></ul>
-    </div>
-
-    <div class="store">
-      <h3>Paris Store Sales</h3>
-      <ul id="paris"></ul>
-    </div>
-
-    <div class="store">
-      <h3>Lima Store Sales</h3>
-      <ul id="lima"></ul>
-    </div>
+  <br>
+  <div id="tableBox">
+    <table id="storeData">
+    </table>
+  </div>
+    <br>
   </section>
+
+
 
 
 
