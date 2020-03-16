@@ -7,73 +7,77 @@
   <link rel="stylesheet" type="text/css" href="../css/reset.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
-  <header>
-    <h1>Pat's Salmon Sales</h1>
-    <br>
-    <img src="../img/logo.png" alt="Company Logo:Salmon">
-  </header>
-  
-  <br>
+  <body>
+    <header>
+      <h1>Pat's Salmon Sales</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html">Home Page</a>
+        </li>
+        <li>
+          <a href="sales.html">Sales Information</a>
+        </li>
+        <li>
+          <a href="../index.html">Merchandise</a>
+        </li>
+        <li>
+          <a href="../index.html">Store Hours</a>
+        </li>
+        <li>
+          <a href="../index.html">Contact Info</a>
+        </li>
+      </ul>
+    </nav>
 
-  <nav>
-    <ul id="navBar">
-      <li>
-        <a href="../index.html">Home Page</a>
-      </li>
-      <li>
-        <a href="sales.html">Sales Information</a>
-      </li>
-    </ul>
-  </nav>
-  <br>
-  <hr>
-  <br>
-  <section id="saleSection">
-    <div id="formBox">
-      <form id="addStoreForm">
-        <fieldset>
-          <legend>Create a new Store Form</legend>
-          <label>
-            Store Name:
-            <input name="name" required></input>
-          </label>
-          <br>
-          <br>
-          <label>
-            Minimum Customer Per Hour:
-            <input type="number" name="minCust" required></input>
-          </label>
-          <br>
-          <br>
-          <label>
-            Maximum Customer Per Hour:
-            <input type="number" name="maxCust" required></input>
-          </label>
-          <br>
-          <br>
-          <label>
-            Average Cookies Sold Per Hour:
-            <input type="number" name="avgCookie" step="any" required></input>
-          </label>
-          <br>
-          <br>
-          <button id="submitButton" type="onclick">Submit to Table</button>
-        </fieldset>
-      </form>
+    <section id="saleSection">
+      <div id="formBox">
+        <form id="addStoreForm">
+          <fieldset>
+            <legend><h2>Create a new Store Form</h2></legend>
+            <label>
+              Store Name:
+              <input name="name" required></input>
+            </label>
+            <br>
+            <br>
+            <label>
+              Minimum Customer Per Hour:
+              <input type="number" name="minCust" required></input>
+            </label>
+            <br>
+            <br>
+            <label>
+              Maximum Customer Per Hour:
+              <input type="number" name="maxCust" required></input>
+            </label>
+            <br>
+            <br>
+            <label>
+              Average Cookies Sold Per Hour:
+              <input type="number" name="avgCookie" step="any" required></input>
+            </label>
+            <br>
+            <br>
+            <button id="submitButton" type="onclick">Submit to Table</button>
+          </fieldset>
+        </form>
+      </div>
+    <br>
+    <div id="tableBox">
+      <table id="storeData">
+      </table>
     </div>
-  <br>
-  <div id="tableBox">
-    <table id="storeData">
-    </table>
-  </div>
-    <br>
-  </section>
+    </section>
 
+    <footer>
+      <img src="../img/chinook.jpg">  
+      <p>Pat's Salmon Cookies &copy; 2020 &#183; All Rights Reserved.</p>
+      <P>Proudly published with Real Salmon.</P>
+    </footer>
 
-
-
-
-<script src="../js/app.js"></script>
-</body>
+    <script src="../js/app.js"></script>
+  </body>
 </html>
